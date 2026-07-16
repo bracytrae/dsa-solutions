@@ -7,7 +7,7 @@ class Solution:
         # looped through the array 
         for number in nums:
 
-            # if the number within the array is not equal to the val passed in that number is put at the first position within the array as is the second and so on
+            # if the number within the array is not equal to the value passed in, that number is put at the first position within the array, and the second number is put at the second position, and so on
             if number != val:
                 nums[k] = number
                 k += 1
