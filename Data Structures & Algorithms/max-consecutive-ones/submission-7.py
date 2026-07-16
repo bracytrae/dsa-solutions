@@ -18,7 +18,9 @@ class Solution:
             if number == 1:
 
                 current_count += 1
-                max_count = max(max_count, current_count) # this automatically sets max_count to the max count of 1's counted consecutively
+
+                # this automatically sets max_count to the max count of 1's counted consecutively
+                max_count = max(max_count, current_count) 
 
             # if it's not 1 it resets the current count back to 0 
             else:
