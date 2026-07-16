@@ -4,7 +4,7 @@ class Solution:
 
         """
         created two counter variables that compare the current count 
-        of the most 1's counted consecutively vs the max_count of 1's 
+        of 1's counted consecutively vs the max_count of 1's 
         counted consecutively.
         """
     
