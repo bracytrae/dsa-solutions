@@ -25,7 +25,7 @@ class Solution {
             greatestRight = Math.max(greatestRight, currentValue);
         }
 
-        // Return the modified array.
+        // returns the array modified by the algorithm 
         return arr;
     }
 }
