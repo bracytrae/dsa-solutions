@@ -6,14 +6,14 @@ class Solution {
 
         for (int number : nums) {
 
-            // Keep non-target values packed at the beginning of the array.
+            // keep's the non-target values sorted at the beginning of the array.
             if (number != val) {
                 nums[k] = number;
                 k += 1;
             }
         }
 
-        // The first k positions now contain every value that was not removed.
+        // the first k positions now contain every value not removed.
         return k;
     }
 }
