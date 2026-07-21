@@ -19,7 +19,7 @@ class Solution {
             arr[index] = greatestRight;
 
             // updates the greatestRight var for the next element to the left.
-            // Compare the saved current value with the greatest value
+            // compares the saved current value with the greatest value
             // already found and keep the larger one.
             
             greatestRight = Math.max(greatestRight, currentValue);
