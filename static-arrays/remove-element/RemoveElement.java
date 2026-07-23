@@ -4,7 +4,9 @@ class Solution {
         // k is both the number of kept values and the next position to fill.
         int k = 0;
 
-        for (int number : nums) {
+        for (int index = 0; index < nums.length; index++) {
+
+            int number = nums[index];
 
             // keep's the non-target values sorted at the beginning of the array.
             if (number != val) {

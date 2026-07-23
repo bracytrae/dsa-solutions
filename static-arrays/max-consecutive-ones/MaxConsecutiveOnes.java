@@ -5,7 +5,9 @@ class Solution {
         int currentCount = 0;
         int maxCount = 0;
 
-        for (int number : nums) {
+        for (int index = 0; index < nums.length; index++) {
+
+            int number = nums[index];
 
             if (number == 1) {
 
