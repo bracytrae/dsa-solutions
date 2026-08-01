@@ -1,0 +1,1 @@
+contains info about arrays important to know 
