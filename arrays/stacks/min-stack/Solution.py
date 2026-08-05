@@ -13,12 +13,12 @@ class MinStack:
         # pushes the value onto the original stack 
         self.stack.append(val)
 
-        # this also pushes the current minimum so the runtime becomes O(1) for min stack aswell
+        # # also pushes the current minimum, this keeps push() and getMin() at O(1) runtime
         if self.min_stack:
             self.min_stack.append(min(val, self.min_stack[-1]))
         else:
 
-            # if it is thefirst value, it is the deafult minimum
+            # if it is the first value, it is the default minimum
             self.min_stack.append(val)
 
     def pop(self) -> None:

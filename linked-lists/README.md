@@ -1,0 +1,1 @@
+contains info about linked lists important to know 
