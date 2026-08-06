@@ -8,9 +8,12 @@ class ListNode:
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 
+        # a merge list needs a real starting point
+
         # this function receives two heads list1 and list2 
 
         # the temporary starting node is ListNode()
+        # this exists because we are building a linked list forward and this gives us a starting point to build the merged list from
         starting_node = ListNode()
 
         """
@@ -32,7 +35,7 @@ class Solution:
 
                 """
 
-                 initially current points to starting_node, so this connects the starting_node to the first list1 node
+                 initially current point to starting_node, so this connects the starting_node to the first list1 node
 
                  ex, starting_node -> 1 -> 2 -> 4 
                 
@@ -64,3 +67,4 @@ class Solution:
 
         # return's the first real node, and what's linked to the first real node, which is the merged list of list1 and list2 is returned
         return starting_node.next
+
