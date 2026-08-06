@@ -35,7 +35,7 @@ class Solution:
 
                 """
 
-                 initially current point to starting_node, so this connects the starting_node to the first list1 node
+                 initially current points to starting_node, so this connects the starting_node to the first list1 node
 
                  ex, starting_node -> 1 -> 2 -> 4 
                 
