@@ -9,6 +9,8 @@ class Solution:
 
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
+        # a reverse linked list needs a real ending 
+
         # no node comes before the head initially
         previous = None
 
