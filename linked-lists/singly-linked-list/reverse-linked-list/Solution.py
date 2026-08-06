@@ -18,7 +18,7 @@ class Solution:
         # continue's as long as the head/current points to a node
         while current:
 
-            # save's the next node before changing the pointer
+            # next_node points to the next node after current
             next_node = current.next
 
             # make's the current node point to the previous node
@@ -33,6 +33,8 @@ class Solution:
         # return's the new head for the reversed list
         return previous
 
+# structure of val.next --> [ val: [...] | next: [Node] ] 
 
+# to change a particular node you need a variable that points to that node 
 
-    
+# keeping track of previous lets you know where you are within the linked list 
