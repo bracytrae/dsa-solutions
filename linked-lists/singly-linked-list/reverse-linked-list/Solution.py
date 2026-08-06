@@ -15,7 +15,7 @@ class Solution:
         # start's at the first node which is the head
         current = head
 
-        # continue's as long as current points to a node
+        # continue's as long as the head/current points to a node
         while current:
 
             # save's the next node before changing the pointer
