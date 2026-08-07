@@ -6,11 +6,11 @@ array ex. [1, 2, 3]
 
 change a value:
 
-[1, 5, 3] ✅
+[1, 3, 3] ✅
 
 add another value:
 
-[1, 2, 3, 4] ❌
+[1, 2, 3, 9] ❌
  
 **dynamic arrays** - can grow or shrink in size
 
@@ -20,5 +20,5 @@ add a value:
 
 remove a value:
 
-[1, 2, 3] ✅
+[1, 2] ✅
 
