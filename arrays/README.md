@@ -1,6 +1,8 @@
-**static arrays** - fixed size
+array ex. [1, 2, 3]
 
-[1, 2, 3]
+------------------------------
+
+**static arrays** - fixed size
 
 change a value:
 
@@ -11,8 +13,6 @@ add another value:
 [1, 2, 3, 4] ❌
  
 **dynamic arrays** - can grow or shrink in size
-
-[1, 2, 3]
 
 add a value:
 
