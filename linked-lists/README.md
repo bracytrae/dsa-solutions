@@ -1,4 +1,5 @@
-contains info about linked lists important to know 
+visuals below for both singly & doubly linked list, 
 
-when working with linked lists it's best to visualize them otherwise it's harder to solve the problem whether that be drawing it out 
-on a peace of paper it's the best strategy. 
+- [singly-linked-list](https://media.geeksforgeeks.org/wp-content/uploads/20240826132228/singly-linked-list-in-c.webp)
+
+- [doubly-linked-list](https://media.geeksforgeeks.org/wp-content/uploads/20240318174216/Doubly-Linked-List-in-Data-Structure.webp)
