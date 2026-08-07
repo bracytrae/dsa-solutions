@@ -2,7 +2,7 @@ array ex... -> [1, 2, 3]
 
 ------------------------------
 
-**static arrays** - fixed size
+**static arrays** - fixed size.
 
 change a value:
 
@@ -12,7 +12,7 @@ add another value:
 
 [1, 2, 3, 9] ❌
  
-**dynamic arrays** - can grow or shrink in size
+**dynamic arrays** - can grow or shrink in size.
 
 add a value:
 
