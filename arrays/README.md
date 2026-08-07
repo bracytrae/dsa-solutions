@@ -9,8 +9,6 @@ change a value:
 add another value:
 
 [1, 2, 3, 4] ❌
-
-size is fixed at 3
  
 **dynamic arrays** - can grow or shrink in size
 
