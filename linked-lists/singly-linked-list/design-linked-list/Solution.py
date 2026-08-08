@@ -16,7 +16,7 @@ class MyLinkedList:
 
     def get(self, index: int) -> int:
 
-        # returns -1 if the index does not exist or is invalid
+        # returns -1 if the index does not exist or is invalid; valid indexes are 0 to size - 1
         if index < 0 or index >= self.size:
             return -1
 
