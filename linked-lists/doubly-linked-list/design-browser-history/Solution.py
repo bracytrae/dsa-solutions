@@ -8,19 +8,16 @@ class ListNode:
         self.next = next
 
 """
-
 conceptually this is what a web page looks like as a node in a doubly linked list
 
 page
  ↓
 [ prev: None | url: "google.com" | next: None ]
-
 """
 
 class BrowserHistory:
 
     """
-
     creates the first home page and makes self.cur point to it
 
     [Google]
@@ -28,14 +25,12 @@ class BrowserHistory:
         ^
 
     self.cur
-
     """
     
     def __init__(self, homepage: str):
         self.cur = ListNode(homepage)
 
     """
-    
     if you're on Google and visit Youtube
 
     Google <- YouTube
