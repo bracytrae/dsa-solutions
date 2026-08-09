@@ -21,9 +21,7 @@ class BrowserHistory:
     creates the first home page and makes self.cur point to it
 
     [Google]
-
         ^
-
     self.cur
     """
     
@@ -36,7 +34,6 @@ class BrowserHistory:
     Google <- YouTube
     ^         ^
     cur     new_page
-    
     """
     def visit(self, url: str) -> None:
         
