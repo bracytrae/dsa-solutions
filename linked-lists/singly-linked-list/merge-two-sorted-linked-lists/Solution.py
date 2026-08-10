@@ -17,11 +17,9 @@ class Solution:
         starting_node = ListNode()
 
         """
-        
-        starting_node ─┐
-                        ──> [temporary node] ──> None
-        current ───────┘
-        
+            starting_node ─┐
+                            ──> [temporary node] ──> None
+            current ───────┘
         """
 
         # current initially points to the temporary node, because of the starting_node
@@ -34,11 +32,9 @@ class Solution:
             if list1.val <= list2.val:
 
                 """
-
                  initially current points to starting_node, so this connects the starting_node to the first list1 node
 
                  ex, starting_node -> 1 -> 2 -> 4 
-                
                 """
 
                 # starting_node points to the next node within list1

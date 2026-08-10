@@ -25,9 +25,7 @@ class Solution:
 
 
 """
+    if an array is input for ex. nums = [1, 2, 3, 4]
 
-If an array is input for ex. nums = [1, 2, 3, 4]
-
-the output would be nums = [1, 2, 3, 4, 1, 2, 3, 4]
-
+    the output would be nums = [1, 2, 3, 4, 1, 2, 3, 4]
 """
