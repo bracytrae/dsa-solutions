@@ -6,4 +6,4 @@ visuals below for both singly & doubly linked list,
 
 - [queues](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221213113312/Queue-Data-Structures.png)
 
-- using queues w/ linked lists is a lot more effective because linked lists naturally support enqueue & dequeue
+    - using queues w/ linked lists is a lot more effective because linked lists naturally support enqueue & dequeue
