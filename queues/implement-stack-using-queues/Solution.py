@@ -7,7 +7,6 @@ from collections import deque
 
 # deque is a python container that can behave like a queue
 
-
 class MyStack:
 
     def __init__(self):
