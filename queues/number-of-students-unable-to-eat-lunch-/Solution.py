@@ -1,3 +1,5 @@
+# queue implementation using a linked list
+
 # creates each student so each student becomes a node in the queue
 
 # so this creates individual students/nodes
