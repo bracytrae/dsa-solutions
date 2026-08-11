@@ -49,7 +49,6 @@ number of ways if I take 2 steps first
 climbStairs(1)    climbStairs(0)
       ↓                 ↓
      (1)                (1)
-
 """
 
 class Solution:
