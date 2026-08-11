@@ -11,7 +11,7 @@ class Solution:
 
             number = nums[index]
 
-            # compact non-target values in place while preserving relative order
+            # compacts non-target values in place while preserving relative order
             if number != val:
                 nums[write_index] = number
                 write_index += 1

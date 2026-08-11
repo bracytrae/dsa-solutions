@@ -6,10 +6,10 @@ class Solution:
         # n represents the length of the input array
         n = len(nums)
 
-        # preallocate an output array with twice the input's length
+        # preallocates an output array with twice the input's length
         ans = [0] * (n * 2)
 
-        # traverse every index in the input array
+        # traverses every index in the input array
         for i in range(n):
 
             # copy the value into the first half at its original index

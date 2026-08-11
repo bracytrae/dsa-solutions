@@ -15,21 +15,21 @@ class Solution:
         # current is the traversal pointer and begins at the original head
         current = head
 
-        # continue while current refers to a node
+        # continues while current refers to a node
         while current:
 
-            # preserve the next node before changing current.next
+            # preserves the next node before changing current.next
             next_node = current.next
 
-            # reverse the link so current points to the previous node
+            # reverses the link so current points to the previous node
             current.next = previous
 
-            # advance both traversal references one node forward
+            # advances both traversal references one node forward
             previous = current
             current = next_node
 
         # previous now refers to the new head of the reversed list
         return previous
 
-# Iterative pointer reversal uses three references:
+# iterative pointer reversal uses three references:
 # previous, current, and next_node.

@@ -1,17 +1,17 @@
 class Solution:
     def isValid(self, s: str) -> bool:
 
-        # map each closing bracket to its matching opening bracket
+        # maps each closing bracket to its matching opening bracket
         matching_bracket = {
             ')': '(',
             ']': '[',
             '}': '{'
         }
 
-        # use a stack to store unmatched opening brackets
+        # uses a stack to store unmatched opening brackets
         stack = []
 
-        # traverse the input string from left to right
+        # traverses the input string from left to right
         for bracket in s:
 
             # dictionary membership identifies a closing bracket

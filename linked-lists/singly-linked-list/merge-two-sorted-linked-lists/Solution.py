@@ -8,7 +8,7 @@ class ListNode:
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 
-        # use a dummy node so inserting the merged head needs no special case
+        # uses a dummy node so inserting the merged head needs no special case
         dummy_node = ListNode()
 
         """
@@ -23,7 +23,7 @@ class Solution:
         # list1 and list2 are traversal pointers into the unmerged portions
         while list1 and list2:
 
-            # compare the values of the two current nodes
+            # compares the values of the two current nodes
             if list1.val <= list2.val:
 
                 """
@@ -33,30 +33,30 @@ class Solution:
                  ex, dummy_node -> 1 -> 2 -> 4
                 """
 
-                # append the smaller current node from list1
+                # appends the smaller current node from list1
                 tail.next = list1
 
 
-                # advance list1 to its next node
+                # advances list1 to its next node
                 list1 = list1.next
 
             else:
 
-                # append the smaller current node from list2
+                # appends the smaller current node from list2
                 tail.next = list2
 
-                # advance list2 to its next node
+                # advances list2 to its next node
                 list2 = list2.next
 
-            # advance the tail after each insertion
+            # advances the tail after each insertion
             tail = tail.next
 
-        # attach the remaining part of the non-empty list
+        # attachs the remaining part of the non-empty list
         if list1:
             tail.next = list1
 
         else:
             tail.next = list2
 
-        # skip the dummy node and return the head of the merged list
+        # skips the dummy node and return the head of the merged list
         return dummy_node.next

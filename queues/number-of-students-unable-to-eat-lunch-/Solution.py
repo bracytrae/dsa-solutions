@@ -31,7 +31,7 @@ class Queue:
         enqueue → insert at the rear
     """
 
-    # initialize an empty queue
+    # initializes an empty queue
     def __init__(self):
         self.front = None
         self.rear = None
@@ -45,7 +45,7 @@ class Queue:
         size = 4
     """
 
-    # enqueue a value at the rear of the queue
+    # enqueues a value at the rear of the queue
     def enqueue(self, val):
 
         new_node = ListNode(val)
@@ -70,7 +70,7 @@ class Queue:
 
         else:
 
-            # link the old rear node to the new node
+            # links the old rear node to the new node
             """
                 front
                 ↓
@@ -81,7 +81,7 @@ class Queue:
 
             self.rear.next = new_node
 
-            # update rear to the new final node
+            # updates rear to the new final node
             """
                 front
                 ↓
@@ -92,39 +92,39 @@ class Queue:
 
             self.rear = new_node
 
-        # increment the number of nodes in the queue
+        # increments the number of nodes in the queue
         self.size += 1
 
     def dequeue(self):
 
-        # handle queue underflow by returning None
+        # handles queue underflow by returning None
         if self.front is None:
             return None
 
-        # preserve the front value before unlinking its node
+        # preserves the front value before unlinking its node
         val = self.front.val
 
-        # dequeue the front node by advancing the front reference
+        # dequeues the front node by advancing the front reference
         self.front = self.front.next
 
-        # decrement the number of nodes in the queue
+        # decrements the number of nodes in the queue
         self.size -= 1
 
-        # restore the empty-queue invariant: both front and rear are None
+        # restores the empty-queue invariant: both front and rear are None
         if self.front is None:
             self.rear = None
 
-        # return the dequeued value
+        # returns the dequeued value
         return val
 
-# simulate the cafeteria process with the linked-list queue
+# simulates the cafeteria process with the linked-list queue
 class Solution:
     def countStudents(self, students: list[int], sandwiches: list[int]) -> int:
 
         # initialize the student queue
         queue = Queue()
 
-        # enqueue students in their original order
+        # enqueues students in their original order
         for student in students:
             queue.enqueue(student)
 
@@ -134,40 +134,40 @@ class Solution:
             etc...
             """
 
-        # track the index of the sandwich at the top of the stack
+        # tracks the index of the sandwich at the top of the stack
         sandwich_index = 0
 
-        # count consecutive rejections of the current sandwich
+        # counts consecutive rejections of the current sandwich
         skipped = 0
 
-        # process students until the queue is empty or no student accepts the top sandwich
+        # processes students until the queue is empty or no student accepts the top sandwich
         while queue.size > 0:
 
             # if the student at the front of the queue wants the current sandwich
             if queue.front.val == sandwiches[sandwich_index]:
 
-                # dequeue the student who accepts the sandwich
+                # dequeues the student who accepts the sandwich
                 queue.dequeue()
 
-                # advance the top of the sandwich stack
+                # advances the top of the sandwich stack
                 sandwich_index += 1
 
-                # reset the rejection count for the new top sandwich
+                # resets the rejection count for the new top sandwich
                 skipped = 0
 
             # if the student at the front of the queue does not want the current sandwich
             else:
 
-                # dequeue the student who rejected the sandwich
+                # dequeues the student who rejected the sandwich
                 student = queue.dequeue()
 
-                # enqueue that student at the rear
+                # enqueues that student at the rear
                 queue.enqueue(student)
 
-                # count this consecutive rejection
+                # counts this consecutive rejection
                 skipped += 1
 
-                # stop after one full queue rotation without a matching preference
+                # stops processing after one full queue rotation without a matching sandwich preference
                 if skipped == queue.size:
                     break
 

@@ -37,16 +37,16 @@ class BrowserHistory:
     """
     def visit(self, url: str) -> None:
 
-        # create a new node whose previous reference points to the current node
+        # creates a new node whose previous reference points to the current node
         new_page = ListNode(url, prev=self.current)
 
-        # link the current node to the new node, discarding any forward history
+        # links the current node to the new node, discarding any forward history
         self.current.next = new_page
 
-        # update the current node
+        # updates the current node
         self.current = new_page
 
-    # traverse backward through previous references, stopping at the head
+    # traverses backward through previous references, stopping at the head
     def back(self, steps: int) -> str:
 
         while self.current.prev is not None and steps > 0:
@@ -55,7 +55,7 @@ class BrowserHistory:
 
         return self.current.url
 
-    # traverse forward through next references, stopping at the tail
+    # traverses forward through next references, stopping at the tail
     def forward(self, steps: int) -> str:
 
         while self.current.next is not None and steps > 0:
