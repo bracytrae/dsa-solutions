@@ -9,7 +9,11 @@ class ListNode:
 each node contains 
 
 [val | next]
+
+this Solution reverses the pointers within the linked list using recursion 
 """
+
+
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
