@@ -8,59 +8,55 @@ class ListNode:
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 
-        # a merge list needs a real starting point
-
-        # this function receives two heads list1 and list2 
-
-        # the temporary starting node is ListNode()
-        # this exists because we are building a linked list forward and this gives us a starting point to build the merged list from
-        starting_node = ListNode()
+        # use a dummy node so inserting the merged head needs no special case
+        dummy_node = ListNode()
 
         """
-            starting_node ─┐
-                            ──> [temporary node] ──> None
-            current ───────┘
+            dummy_node ────┐
+                            ──> [dummy node] ──> None
+            tail ─────────┘
         """
 
-        # current initially points to the temporary node, because of the starting_node
-        current = starting_node
+        # tail always refers to the final node in the merged list
+        tail = dummy_node
 
-        # continue's as long as both heads list1 and list2 point to a node
+        # list1 and list2 are traversal pointers into the unmerged portions
         while list1 and list2:
 
-            # compare's the values of the current nodes of list1 and list2
+            # compare the values of the two current nodes
             if list1.val <= list2.val:
 
                 """
-                 initially current points to starting_node, so this connects the starting_node to the first list1 node
+                 initially tail points to dummy_node, so the first insertion
+                 connects dummy_node to the head of the merged list
 
-                 ex, starting_node -> 1 -> 2 -> 4 
+                 ex, dummy_node -> 1 -> 2 -> 4
                 """
 
-                # starting_node points to the next node within list1
-                current.next = list1
+                # append the smaller current node from list1
+                tail.next = list1
 
 
-                # move's list1 to its next node
+                # advance list1 to its next node
                 list1 = list1.next
 
             else:
 
-                # starting_node points to the next node within list2
-                current.next = list2
+                # append the smaller current node from list2
+                tail.next = list2
 
-                # move's list2 to its next node
+                # advance list2 to its next node
                 list2 = list2.next
 
-            current = current.next
+            # advance the tail after each insertion
+            tail = tail.next
 
-        # attaches any nodes left after the loop 
+        # attach the remaining part of the non-empty list
         if list1:
-            current.next = list1
+            tail.next = list1
 
         else:
-            current.next = list2
+            tail.next = list2
 
-        # return's the first real node, and what's linked to the first real node, which is the merged list of list1 and list2 is returned
-        return starting_node.next
-
+        # skip the dummy node and return the head of the merged list
+        return dummy_node.next

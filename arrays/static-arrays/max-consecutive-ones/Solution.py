@@ -3,9 +3,9 @@ from typing import List
 class Solution:
     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
 
-        # tracks the current streak and the longest streak seen so far.
-        current_count = 0
-        max_count = 0
+        # track the current consecutive run and the maximum run seen so far
+        current_streak = 0
+        max_streak = 0
 
         for index in range(len(nums)):
 
@@ -13,13 +13,13 @@ class Solution:
 
             if number == 1:
 
-                current_count += 1
+                current_streak += 1
 
-                # updates the best result only when the current streak grows.
-                max_count = max(max_count, current_count)
+                # update the maximum after extending the current streak
+                max_streak = max(max_streak, current_streak)
 
             else:
-                # a zero ends the current streak.
-                current_count = 0
+                # a zero breaks the consecutive run
+                current_streak = 0
 
-        return max_count
+        return max_streak

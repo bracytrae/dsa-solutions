@@ -1,11 +1,11 @@
-# Recursive implementation of n! (n-factorial) calculation
-
-# this is not a Leetcode level problem but it does help me understand recursion and how it works
+# Recursive implementation of the factorial function, n!.
 
 def factorial(n):
-    # base case: n = 0 or 1
+    # precondition: n is a nonnegative integer
+
+    # base case: return directly without making another recursive call
     if n <= 1:
         return 1
 
-    # recursive case: n! = n * (n - 1)!
+    # recursive case: reduce the problem from factorial(n) to factorial(n - 1)
     return n * factorial(n - 1)

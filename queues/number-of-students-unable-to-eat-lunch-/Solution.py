@@ -1,15 +1,11 @@
-# queue implementation using a linked list
-
-# creates each student so each student becomes a node in the queue
-
-# so this creates individual students/nodes
+# Linked-list implementation of a FIFO queue.
 
 """
-    each student becomes a node
+    each student is stored in a node
 
-    val stores the student's sandwich preference 
+    val stores the student's sandwich preference
 
-    next points to the next student in the queue 
+    next stores a reference to the next node in the queue
 
                 ↓
 
@@ -21,23 +17,21 @@ class ListNode:
         self.val = val
         self.next = None
 
-# the queue controls the linked list controlling the front and rear nodes
+# front supports dequeue, and rear supports O(1) enqueue
 class Queue:
 
     """
-        initially there are no students 
+        initially there are no students
 
-        front = None 
-        rear = None 
+        front = None
+        rear = None
         size = 0
 
-        the queue needs both front and rear because 
-
-        dequeue → remove's from front
-        enqueue → add's to rear
+        dequeue → remove from the front
+        enqueue → insert at the rear
     """
 
-    # this is the contructor for the queue, it initializes the front and rear to None and size to 0
+    # initialize an empty queue
     def __init__(self):
         self.front = None
         self.rear = None
@@ -51,13 +45,12 @@ class Queue:
         size = 4
     """
 
-    # adds a student to the rear of the queue
-    # this is what builds and preserves the linked-list-queue
+    # enqueue a value at the rear of the queue
     def enqueue(self, val):
 
         new_node = ListNode(val)
 
-        # when the queue is empty which inevitably happens at the start, the front and rear both point to the new node
+        # in a one-node queue, front and rear refer to the same node
 
         """
             ex.
@@ -77,7 +70,7 @@ class Queue:
 
         else:
 
-            # rear points to the new node
+            # link the old rear node to the new node
             """
                 front
                 ↓
@@ -88,7 +81,7 @@ class Queue:
 
             self.rear.next = new_node
 
-            # rear points to the new last node
+            # update rear to the new final node
             """
                 front
                 ↓
@@ -99,39 +92,39 @@ class Queue:
 
             self.rear = new_node
 
-        # increments the size of the queue
+        # increment the number of nodes in the queue
         self.size += 1
 
     def dequeue(self):
 
-        # checks if the queue is empty, if it is then it returns None
+        # handle queue underflow by returning None
         if self.front is None:
             return None
 
-        # save's the value of the front of the node
+        # preserve the front value before unlinking its node
         val = self.front.val
 
-        # front points to the next node that will be saved in the queue
+        # dequeue the front node by advancing the front reference
         self.front = self.front.next
 
-        # decrements the size of the queue
+        # decrement the number of nodes in the queue
         self.size -= 1
 
-        # if the front is empty then the queue becomes empty
+        # restore the empty-queue invariant: both front and rear are None
         if self.front is None:
             self.rear = None
 
-        # returns the value of the front node that was removed from the queue
+        # return the dequeued value
         return val
 
-# uses the Queue class to simulate the cafeteria problem
+# simulate the cafeteria process with the linked-list queue
 class Solution:
     def countStudents(self, students: list[int], sandwiches: list[int]) -> int:
 
-        # creates the empty queue for the students
+        # initialize the student queue
         queue = Queue()
 
-        # add every student to the queue
+        # enqueue students in their original order
         for student in students:
             queue.enqueue(student)
 
@@ -141,40 +134,40 @@ class Solution:
             etc...
             """
 
-        # starts at index 0 of the sandwiches list 
-        sandwich = 0
+        # track the index of the sandwich at the top of the stack
+        sandwich_index = 0
 
-       # number of students who rejected the current sandwich 
+        # count consecutive rejections of the current sandwich
         skipped = 0
 
-        # continues as long as there are students in the queue so while the queue is not empty
+        # process students until the queue is empty or no student accepts the top sandwich
         while queue.size > 0:
 
             # if the student at the front of the queue wants the current sandwich
-            if queue.front.val == sandwiches[sandwich]:
+            if queue.front.val == sandwiches[sandwich_index]:
 
-                # remove's student from front
+                # dequeue the student who accepts the sandwich
                 queue.dequeue()
 
-                # points to the next sandwich
-                sandwich += 1
+                # advance the top of the sandwich stack
+                sandwich_index += 1
 
-                # moves on to the new sandwich, so skipped is reset
+                # reset the rejection count for the new top sandwich
                 skipped = 0
 
             # if the student at the front of the queue does not want the current sandwich
             else:
 
-                # remove's student from front
+                # dequeue the student who rejected the sandwich
                 student = queue.dequeue()
 
-                # add the student back to the rear
+                # enqueue that student at the rear
                 queue.enqueue(student)
 
-                # increments the number of students who have rejected the current sandwich
+                # count this consecutive rejection
                 skipped += 1
 
-                # if all students in the queue have rejected the current sandwich then the loop breaks and the number of students left in the queue is returned
+                # stop after one full queue rotation without a matching preference
                 if skipped == queue.size:
                     break
 

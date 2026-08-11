@@ -6,33 +6,29 @@ class ListNode:
         self.next = next
 
 """
-each node contains 
+each node contains
 
 [val | next]
 
-this Solution reverses the pointers within the linked list using recursion 
+this solution reverses the links in a singly linked list using recursion
 """
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
-        # base case
-        # determines when the recursive function stop's calling itself
-
-        # if the list is empty or if the list is at the last node it returns the head of the reversed list 
+        # base case: an empty list or one-node list is already reversed
+        # the original tail becomes the head during recursion unwinding
         if head is None or head.next is None:
             return head
 
-        # this makes the next node the new head of the reversed list
+        # recursively reverse the sublist beginning at head.next
         new_head = self.reverseList(head.next)
 
-        # this accesses the next node's pointer and points it back to the current head/node
+        # during recursion unwinding, reverse the link back to the current node
         head.next.next = head
 
-        # this sets the current head's pointer to None so it doesn't point to the next node anymore
-        # this helps create a proper reversed linked list
+        # break the old forward link; the original head becomes the new tail
         head.next = None
 
-        # returns the new head of the reversed list
+        # propagate the new head back through the recursive call stack
         return new_head
-    

@@ -1,4 +1,4 @@
-# represents a node which contains a value and a pointer for a next node
+# represents a node containing a value and a reference to the next node
 class ListNode:
     def __init__(self, val=0):
 
@@ -8,103 +8,101 @@ class ListNode:
 class MyLinkedList:
     def __init__(self):
 
-        # starting node before the first real node
-        self.starting_node = ListNode()
+        # dummy node before the first real node
+        self.dummy_node = ListNode()
 
-        # keeps track of the number of nodes in the linked list
+        # size stores the number of data nodes; the dummy node is not counted
         self.size = 0
 
     def get(self, index: int) -> int:
 
-        # returns -1 if the index does not exist or is invalid; valid indexes are 0 to size - 1
+        # validate that index is within the list's bounds: 0 through size - 1
         if index < 0 or index >= self.size:
             return -1
 
-        # starts at the first real node
-        current = self.starting_node.next
+        # initialize the traversal pointer at the head
+        current = self.dummy_node.next
 
-        # points to the next node until current reaches the requested index
+        # traverse to the node at index
         for i in range(index):
             current = current.next
 
-        # returns the value at that node 
+        # return the data stored in the current node
         return current.val
 
     def addAtHead(self, val: int) -> None:
 
-        # creates the new node
+        # allocate the node to insert
         new_node = ListNode(val)
 
-        # the new node points to the old first node
-        new_node.next = self.starting_node.next
+        # insert the new node between the dummy node and the old head
+        new_node.next = self.dummy_node.next
 
-        # starting node now points to the new first node
-        self.starting_node.next = new_node
+        self.dummy_node.next = new_node
 
-        # updates the number of nodes that are known to exist in the linked list
+        # increment the list size after insertion
         self.size += 1
 
     def addAtTail(self, val: int) -> None:
 
-        # creates the new node
+        # allocate the node to insert
         new_node = ListNode(val)
 
-        # starts at the starting node
-        current = self.starting_node
+        # initialize the traversal pointer at the dummy node
+        current = self.dummy_node
 
-        # points to the next node until current reaches the last node
+        # traverse until current refers to the tail
         while current.next is not None:
             current = current.next
 
-        # makes the last node point to the new node
+        # append the new node after the tail
         current.next = new_node
 
-        # updates the number of nodes that are known to exist in the linked list
+        # increment the list size after insertion
         self.size += 1
 
     def addAtIndex(self, index: int, val: int) -> None:
 
-        # does nothing if the index is invalid 
+        # insertion is valid from index 0 through size, inclusive
         if index < 0 or index > self.size:
             return
 
-        # begins before the first real node
-        previous = self.starting_node
+        # previous begins at the dummy node so index 0 needs no special case
+        previous = self.dummy_node
 
-        # points to the node before the insertion position
+        # traverse to the node immediately before the insertion position
         for i in range(index):
             previous = previous.next
 
-        # creates the new node
+        # allocate the node to insert
         new_node = ListNode(val)
 
-        # new node points to the next node
+        # insert the new node between previous and previous.next
         new_node.next = previous.next
 
-        # previous node points to the new node
         previous.next = new_node
 
-        # updates the number of nodes that are known to exist in the linked list
+        # increment the list size after insertion
         self.size += 1
 
     def deleteAtIndex(self, index: int) -> None:
 
-        # does nothing if the index is invalid 
+        # deletion is valid only for an existing index
         if index < 0 or index >= self.size:
             return
 
-        # begins before the first real node
-        previous = self.starting_node
+        # previous begins at the dummy node so index 0 needs no special case
+        previous = self.dummy_node
 
-        # points to the node before the node chosen for deletion
+        # traverse to the node immediately before the deletion target
         for i in range(index):
             previous = previous.next
 
-        # saves the node that will be deleted
+        # store a reference to the target node
         node_to_delete = previous.next
 
-        # skips over the deleted node
+        # unlink the target by connecting previous to the following node
         previous.next = node_to_delete.next
 
-        # updates the number of nodes that are known to exist in the linked list
+        # decrement the list size after deletion
         self.size -= 1

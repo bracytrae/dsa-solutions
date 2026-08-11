@@ -9,29 +9,28 @@ class Solution:
         """
 
 
-        # This record will store all valid scores in order
-        record = []
+        # use a stack to store the valid scores in insertion order
+        score_stack = []
 
-        # this iterates through operations that contains a list of strings 
+        # process each operation from left to right
         for op in operations:
 
-            # If the op is "+", this adds a score equal to the sum of the previous two scores within the list
+            # if the operation is "+", push the sum of the top two scores onto the stack
             if op == "+":
-                record.append(record[-1] + record[-2])
+                score_stack.append(score_stack[-1] + score_stack[-2])
 
-            # If the operation is "D", this adds a score equal to double of the previous score
+            # if the operation is "D", push double the top score onto the stack
             elif op == "D":
-                record.append(2 * record[-1])
+                score_stack.append(2 * score_stack[-1])
 
-            # If the operation is "C", this removes the previous score from the record since pop() removes the very last element within the list by default
+            # if the operation is "C", pop the top score from the stack
             elif op == "C":
-                record.pop()
+                score_stack.pop()
 
-            # else the operation is an integer score since no string's among the conditions "+"", "D", "C" remain
+            # otherwise, convert the operation to an integer and push it onto the stack
             else:
-                record.append(int(op))
+                score_stack.append(int(op))
 
-        # returns the total sum 
-        return sum(record)
+        # return the sum of all scores remaining on the stack
+        return sum(score_stack)
 
-    

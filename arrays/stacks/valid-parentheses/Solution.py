@@ -1,39 +1,35 @@
 class Solution:
     def isValid(self, s: str) -> bool:
 
-        # maps closing brackets to their matching opening brackets.
-        # key, value.
-        pairs = {
+        # map each closing bracket to its matching opening bracket
+        matching_bracket = {
             ')': '(',
             ']': '[',
             '}': '{'
         }
 
-        # stack for storing opening brackets only.
+        # use a stack to store unmatched opening brackets
         stack = []
 
-        # go's through each character in the string.
-        for c in s:
+        # traverse the input string from left to right
+        for bracket in s:
 
-            # if this block run's first the function would return false immediately.
-            # if it's a closing bracket.
-            # this checks for the key.
-            if c in pairs:
+            # dictionary membership identifies a closing bracket
+            if bracket in matching_bracket:
 
-            # if the stack is empty or the end of the stack's bracket does not match "c's" opening bracket, return False.
-                if not stack or stack[-1] != pairs[c]:
+                # an empty stack or mismatched top means the delimiters are invalid
+                if not stack or stack[-1] != matching_bracket[bracket]:
                     return False
 
-                # else this removes the matching opening bracket, so there exists a opening and closing bracket pair.
-                else: 
+                # pop the matching opening bracket from the top of the stack
+                else:
                     stack.pop()
 
             else:
 
-                # it has to be a opening bracket and it's added to the stack.
-                stack.append(c)
+                # push the opening bracket onto the stack
+                stack.append(bracket)
 
-        # valid only if every bracket matched correctly; line 29 makes it possible.
-        return len(stack) == 0
+        # the delimiters are balanced only when no unmatched brackets remain
+        return not stack
 
-    

@@ -4,27 +4,21 @@ class Solution:
 
     def replaceElements(self, arr: List[int]) -> List[int]:
 
-        # stores the greatest number found to the right of the current index.
-        # the last element has no numbers to its right, so it becomes -1.
-        greatest_right = -1
+        # maintain a running maximum of the elements to the right
+        # -1 is the required replacement for the final element
+        max_to_right = -1
 
-        # moves through the array from right to left as opposed to the conventional way of looping through an array.
+        # uses reverse traversal to move through the array from right to left.
         for index in range(len(arr) - 1, -1, -1):
 
-            # saves the current value before replacing it.
+            # preserve the current value before overwriting it in place
             current_value = arr[index]
 
-            # replaces the current element with the greatest value.
-            # that was found to its right.
-            # the first sequence in the iteration makes it a bit confusing to understand, but what is commented at the very start should help with clarification.
+            # replace the current element with the maximum to its right
+            arr[index] = max_to_right
 
-            arr[index] = greatest_right
+            # include the original current value in the next running maximum
+            max_to_right = max(max_to_right, current_value)
 
-            # updates the greatest_right var for the next element to the left.
-            # compares the saved current value with the greatest value
-            # already found and keep the larger one.
-
-            greatest_right = max(greatest_right, current_value)
-
-        # returns the array modified by the algorithm
+        # return the array after the in-place transformation
         return arr

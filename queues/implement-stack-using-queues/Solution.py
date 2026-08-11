@@ -1,51 +1,48 @@
-# stack implementation using two queues
-
-# make's a fifo structure behave like a lifo structure 
-# there are two fifo queues but we arrange them so the newest value is always at the front of the main queue which makes the queues behave like a lifo stack
+# Implement a LIFO stack using two FIFO queues.
+# Keep the most recently pushed value at the front of the main queue.
 
 from collections import deque
 
-# deque is a python container that can behave like a queue
+# deque supports O(1) enqueue and dequeue operations at opposite ends
 
 class MyStack:
 
     def __init__(self):
 
-        # main queue
+        # main_queue stores elements in stack order
         """
-            q1
+            main_queue
 
-            front → [ ] ← rear      
+            front → [ ] ← rear
         """
-        self.q1 = deque()
+        self.main_queue = deque()
 
-        # temporary queue used to rearrange elements
-        self.q2 = deque()
+        # auxiliary_queue temporarily holds elements during push
+        self.auxiliary_queue = deque()
 
     def push(self, x: int) -> None:
 
-        # adds the newest value to the empty temporary queue
-        self.q2.append(x)
+        # enqueue the new value first so it becomes the stack's top
+        self.auxiliary_queue.append(x)
 
-        # move's everything from q1 to q2 so the newest value is at the front of q2
-        while self.q1:
-            self.q2.append(self.q1.popleft())
+        # transfer existing values behind the new value
+        while self.main_queue:
+            self.auxiliary_queue.append(self.main_queue.popleft())
 
-        # q2 now has the stack order we want so q2 becomes the main queue and q1 becomes the temporary queue for the next push
-        self.q1, self.q2 = self.q2, self.q1
+        # swap the queue references; the auxiliary queue becomes empty helper storage
+        self.main_queue, self.auxiliary_queue = self.auxiliary_queue, self.main_queue
 
     def pop(self) -> int:
 
-        # removes the value at the front of q1 and returns the removed value 
-        return self.q1.popleft()
+        # dequeue and return the value representing the stack's top
+        return self.main_queue.popleft()
 
     def top(self) -> int:
 
-        # returns the value at the front of q1 without removing it
-        return self.q1[0]
+        # peek at the stack's top without removing it
+        return self.main_queue[0]
 
     def empty(self) -> bool:
 
-        # returns True if the main queue which is q1 is empty and False if it is not
-        return len(self.q1) == 0
-        
+        # the stack is empty exactly when the main queue is empty
+        return len(self.main_queue) == 0
