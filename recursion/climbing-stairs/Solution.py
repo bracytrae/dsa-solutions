@@ -51,7 +51,11 @@ climbStairs(1)    climbStairs(0)
      (1)                (1)
 """
 
+# @cache saves previous results so repeated calls don't recalculate results already computed
+from functools import cache
+
 class Solution:
+    @cache
     def climbStairs(self, n: int) -> int:
 
         # base cases which is different from the conventional Fibonacci sequences base case
