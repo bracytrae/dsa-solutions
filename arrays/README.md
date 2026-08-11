@@ -22,3 +22,4 @@ remove a value:
 
 [1, 2] ✅
 
+* I'm going to change this README.md and other's aswell as I become more skilled in dsa regarding terminology and the visualization of how things work beyond code because that's ultimately what's more important.
