@@ -21,14 +21,14 @@ class Solution:
         if head is None or head.next is None:
             return head
 
-        # recursively reverse the sublist beginning at head.next
+        # recursively reverses the sublist beginning at head.next
         new_head = self.reverseList(head.next)
 
-        # during recursion unwinding, reverse the link back to the current node
+        # during recursion unwinding, this reverses the link back to the current node
         head.next.next = head
 
-        # break the old forward link; the original head becomes the new tail
+        # breaks the old forward link; the original head becomes the new tail
         head.next = None
 
-        # propagate the new head back through the recursive call stack
+        # propagates the new head back through the recursive call stack
         return new_head
