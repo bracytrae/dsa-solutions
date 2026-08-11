@@ -13,8 +13,6 @@ each node contains
 this Solution reverses the pointers within the linked list using recursion 
 """
 
-
-
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
