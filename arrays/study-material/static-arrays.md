@@ -5,6 +5,7 @@ static arrays - cannot grow/shrink or store additional elements.
 ## Reading from an array 
 
 > choosing the value in an array 
+---
 ```python
 # initializing an array 
 myArray = [1, 2, 3]
@@ -16,6 +17,7 @@ myArray = [i]
 
 > traversing through an array 
 *the last element in an array is always at index n - 1, where n is the length of the array.*
+---
 ```python
 for i in range(len(myArray)):
     print(myArray[i])
@@ -32,7 +34,8 @@ while i < len(myArray):
 ## Deleting from an array 
 
 > deleting from the end of the array 
-*length represents the number of values within the array passed in we wish to use.*
+*in this algorithim length represents the number of values within the array passed in we wish to use.*
+---
 ```python
 def removeEnd(arr, length):
     if length > 0:
@@ -42,8 +45,9 @@ def removeEnd(arr, length):
 ```
 <br>
 
-> deleting at an i'th index 
-*length represents the same thing here, i represents the index you wish to access*
+> deleting at an i'th index
+*in this algorithim length represents the same thing here, and i represents the index you wish to access*
+---
 ```python
 def removeMiddle(arr, i, length):
     for index in range(i + 1, length):
@@ -55,7 +59,8 @@ def removeMiddle(arr, i, length):
 
 ## Insertion 
 > inserting at the end 
-*length represents the same thing here, capacity represents how big the array is, and n represents the new value you want to insert into the array.*
+*in this algorithim length also represents the same thing here, capacity represents how big the array is, and n represents the new value you want to insert into the array.*
+---
 ```python
 def insertEnd(arr, n, length, capacity):
     if length < capacity: 
@@ -65,14 +70,16 @@ def insertEnd(arr, n, length, capacity):
 <br>
 
 > inserting at the i'th index 
-*length represents the same thing here, i represents the index you wish to access, and n represents the new value you want to insert into the array.*
+*in this algorithim length also represents the same thing here, i represents the index you wish to access, and n represents the new value you want to insert into the array.*
+---
 ```python
 def insertMiddle(arr, i, n, length):
     for index in range(length - 1, i - 1, -1):
         arr[index + 1] = arr[index]
 
     arr[i] = n
-# inserts a new value at index i by shifting every element after it one position to its right creating space for the new value.
+
+# inserts a new a value at index i by shifting the element at i and every element after it one position to it's right
 ```
 <br>
 
