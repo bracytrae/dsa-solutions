@@ -32,8 +32,6 @@ while i < len(myArray):
 ```
 *the last element in an array is always at index n - 1, where n is the length of the array.*
 
-<br>
-
 ## Deleting from an array 
 
 <br>
@@ -60,8 +58,6 @@ def removeMiddle(arr, i, length):
 # removes the element at index i by shifting every element after it one position to its left replacing it's position.
 ```
 *in this algorithim length represents the same thing here, and i represents the index you wish to access.*
-
-<br>
 
 ## Insertion 
 
