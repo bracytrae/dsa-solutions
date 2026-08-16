@@ -2,22 +2,22 @@
 
 static arrays - cannot grow/shrink or store additional elements.
 
-## Reading from an array 
+## Reading from a array 
 
 <br>
 
-> choosing a value within an array 
+> choosing a value within a array 
 
 ```python
-# initializing an array 
+# initializing a array 
 myArray = [1, 2, 3]
 
-# accessing an arbitrary element within an array
+# accessing a arbitrary element within a array
 myArray = [i]
 ```
 <br>
 
-> traversing within an array 
+> traversing within a array 
 
 ```python
 for i in range(len(myArray)):
@@ -30,13 +30,13 @@ while i < len(myArray):
     print(myArray[i])
     i += 1
 ```
-*the last element in an array is always at index n - 1, where n is the length of the array.*
+*the last element in a array is always at index n - 1, where n is the length of the array.*
 
-## Deleting from an array 
+## Deleting from a array 
 
 <br>
 
-> deleting from the end of an array 
+> deleting from the end of a array 
 
 ```python
 def removeEnd(arr, length):
@@ -49,7 +49,7 @@ def removeEnd(arr, length):
 
 <br>
 
-> deleting at an i'th index in an array
+> deleting at a i'th index in a array
 
 ```python
 def removeMiddle(arr, i, length):
@@ -63,7 +63,7 @@ def removeMiddle(arr, i, length):
 
 <br>
 
-> inserting at the end of an array
+> inserting at the end of a array
 
 ```python
 def insertEnd(arr, n, length, capacity):
@@ -75,7 +75,7 @@ def insertEnd(arr, n, length, capacity):
 
 <br>
 
-> inserting at the i'th index in an array
+> inserting at the i'th index in a array
 
 ```python
 def insertMiddle(arr, i, n, length): 
