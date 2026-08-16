@@ -4,6 +4,8 @@ static arrays - cannot grow/shrink or store additional elements.
 
 ## Reading from an array 
 
+<br>
+
 > choosing the value in an array 
 
 ```python
@@ -34,6 +36,8 @@ while i < len(myArray):
 
 ## Deleting from an array 
 
+<br>
+
 > deleting from the end of the array 
 
 ```python
@@ -60,6 +64,8 @@ def removeMiddle(arr, i, length):
 <br>
 
 ## Insertion 
+
+<br>
 
 > inserting at the end 
 
