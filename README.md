@@ -1,1 +1,1 @@
-biggest thing understanding the difference between 0(1) & 0(n)
+biggest thing understanding time complexity when you understand the underlying patterns within data structures and algorithims. 
