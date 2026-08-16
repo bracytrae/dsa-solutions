@@ -6,7 +6,7 @@ static arrays - cannot grow/shrink or store additional elements.
 
 <br>
 
-> choosing the value in an array 
+> choosing a value within an array 
 
 ```python
 # initializing an array 
@@ -17,7 +17,7 @@ myArray = [i]
 ```
 <br>
 
-> traversing through an array 
+> traversing within an array 
 
 ```python
 for i in range(len(myArray)):
@@ -36,7 +36,7 @@ while i < len(myArray):
 
 <br>
 
-> deleting from the end of the array 
+> deleting from the end of an array 
 
 ```python
 def removeEnd(arr, length):
@@ -49,7 +49,7 @@ def removeEnd(arr, length):
 
 <br>
 
-> deleting at an i'th index
+> deleting at an i'th index in an array
 
 ```python
 def removeMiddle(arr, i, length):
@@ -63,7 +63,7 @@ def removeMiddle(arr, i, length):
 
 <br>
 
-> inserting at the end 
+> inserting at the end of an array
 
 ```python
 def insertEnd(arr, n, length, capacity):
@@ -75,7 +75,7 @@ def insertEnd(arr, n, length, capacity):
 
 <br>
 
-> inserting at the i'th index 
+> inserting at the i'th index in an array
 
 ```python
 def insertMiddle(arr, i, n, length): 
