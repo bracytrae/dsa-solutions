@@ -55,9 +55,11 @@ def removeMiddle(arr, i, length):
 
 # removes the element at index i by shifting every element after it one position to its left replacing it's position.
 ```
+
 <br>
 
 ## Insertion 
+
 > inserting at the end 
 *in this algorithim length also represents the same thing here, capacity represents how big the array is, and n represents the new value you want to insert into the array.*
 ---
@@ -73,14 +75,11 @@ def insertEnd(arr, n, length, capacity):
 *in this algorithim length also represents the same thing here, i represents the index you wish to access, and n represents the new value you want to insert into the array.*
 ---
 ```python
-def insertMiddle(arr, i, n, length):
-    for index in range(length - 1, i - 1, -1):
+def insertMiddle(arr, i, n, length): 
+    for index in range(length - 1, i - 1, -1): # (start, stop, step): back 1
         arr[index + 1] = arr[index]
-
     arr[i] = n
 
 # inserts a new a value at index i by shifting the element at i and every element after it one position to it's right
 ```
 <br>
-
-
