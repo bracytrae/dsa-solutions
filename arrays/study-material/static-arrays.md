@@ -44,6 +44,7 @@ def removeEnd(arr, length):
 # sets the last value of the values chosen to 0 through usage of the algorithmic formula.
 ```
 *in this algorithim length represents the number of values within the array passed in we wish to use.*
+
 <br>
 
 > deleting at an i'th index
@@ -69,6 +70,7 @@ def insertEnd(arr, n, length, capacity):
 # checks if the array has space, then inserts n into the next position at the end of the currently used values.
 ```
 *in this algorithim length also represents the same thing here, capacity represents how big the array is, and n represents the new value you want to insert into the array.*
+
 <br>
 
 > inserting at the i'th index 
@@ -82,4 +84,5 @@ def insertMiddle(arr, i, n, length):
 # inserts a new a value at index i by shifting the element at i and every element after it one position to it's right
 ```
 *in this algorithim length also represents the same thing here, i represents the index you wish to access, and n represents the new value you want to insert into the array.*
+
 <br>
