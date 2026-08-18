@@ -9,10 +9,10 @@ static arrays - cannot grow/shrink or store additional elements.
 > choosing a value within an array 
 
 ```python
-# initializing a array 
+# initializing an array 
 myArray = [1, 2, 3]
 
-# accessing a arbitrary element within a array
+# accessing an arbitrary element within a array
 myArray = [i]
 ```
 <br>
@@ -30,7 +30,7 @@ while i < len(myArray):
     print(myArray[i])
     i += 1
 ```
-*\*the last element in a array is always at index n - 1, where n is the length of the array.*
+*\*the last element in an array is always at index n - 1, where n is the length of the array.*
 
 ## Deleting from a array 
 
@@ -45,7 +45,7 @@ def removeEnd(arr, length):
 
 # sets the last value of the values chosen to 0 through usage of the algorithmic formula.
 ```
-*\*in this algorithim length represents the number of values within the array passed in we wish to use.*
+*\*in this algorithim length represents the number of values chosen within the array we wish to use.*
 
 <br>
 
@@ -55,6 +55,7 @@ def removeEnd(arr, length):
 def removeMiddle(arr, i, length):
     for index in range(i + 1, length):
         arr[index - 1] = arr[index]
+
 # removes the element at index i by shifting every element after it one position to its left replacing it's position.
 ```
 *\*in this algorithim length represents the same thing here, and i represents the index you wish to access.*
@@ -69,6 +70,7 @@ def removeMiddle(arr, i, length):
 def insertEnd(arr, n, length, capacity):
     if length < capacity: 
         arr[length] = n
+
 # checks if the array has space, then inserts n into the next position at the end of the currently used values.
 ```
 *\*in this algorithim length also represents the same thing here, capacity represents how big the array is, and n represents the new value you want to insert into the array.*

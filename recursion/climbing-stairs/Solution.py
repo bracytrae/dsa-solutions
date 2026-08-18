@@ -58,7 +58,7 @@ class Solution:
     @cache
     def climbStairs(self, n: int) -> int:
 
-        # base cases which is different from the conventional Fibonacci sequences base case
+        # the base cases which is different from the conventional Fibonacci sequences base case
         if n == 0 or n == 1:
             return 1
 
