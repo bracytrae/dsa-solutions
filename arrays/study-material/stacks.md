@@ -1,3 +1,6 @@
+# Stacks 
+stacks - 'abstract' data type 
+
 key things to remember here 
 
 push

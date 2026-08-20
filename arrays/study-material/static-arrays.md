@@ -1,6 +1,5 @@
 # Static Arrays 
-static arrays - 'cannot' grow/shrink or store 'additional' elements.
-
+static arrays - 'concrete' data type that 'cannot' grow/shrink or store 'additional' elements.
 
 ## Reading arrays
 
