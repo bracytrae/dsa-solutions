@@ -1,1 +1,1 @@
-biggest thing understanding time complexity when you understand the underlying patterns within data structures and algorithims. 
+time complexity 
