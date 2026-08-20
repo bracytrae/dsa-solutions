@@ -49,7 +49,7 @@ def removeEnd(arr, length):
 
 # sets the last value of the values chosen to "0" through usage of the algorithmic formula.
 ```
-*\*in this algorithim length represents how many positions in the array are currently being used*
+*\*in this algorithim length represents how many positions in the array are currently being used.*
 
 
 
