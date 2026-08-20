@@ -15,7 +15,7 @@ class DynamicArray:
 
 # creates a class blueprint for possible dynamic array objects due to behavior; dynamic arrays contain the same attributes as static arrays (e.g., capacity, length, & arr) but contain 'additive' -> behavior (e.g., resize, pushback).
 ```
-*\*in the 'states', capacity represents how big the array is, length represents the number of values chosen within the array we wish to use, arr represents where the values are stored.*
+*\*in the 'states', capacity represents how big the array is, length represents the number of values chosen within the array we wish to use, and arr represents where the values are stored.*
 
 <br>
 

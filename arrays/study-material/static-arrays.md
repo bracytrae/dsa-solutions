@@ -47,7 +47,7 @@ def removeEnd(arr, length):
     if length > 0:
         arr[length - 1] = 0
 
-# sets the last value of the values chosen to 0 through usage of the algorithmic formula.
+# sets the last value of the values chosen to "0" through usage of the algorithmic formula.
 ```
 *\*in this algorithim length represents the number of values chosen within the array we wish to use.*
 
