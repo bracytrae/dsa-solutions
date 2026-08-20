@@ -3,7 +3,7 @@ dynamic arrays - 'can' grow/shrink and store 'additional' elements.
 
 <br>
 
-> creating the class blueprint
+> creating a class blueprint
 
 ```python
 class DynamicArray:

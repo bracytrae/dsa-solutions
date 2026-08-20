@@ -13,7 +13,7 @@ static arrays - 'cannot' grow/shrink or store 'additional' elements.
 # initializing an array 
 myArray = [1, 2, 3]
 
-# accessing an arbitrary element within a array
+# accessing an arbitrary element within an array
 myArray = [i]
 ```
 
@@ -36,7 +36,7 @@ while i < len(myArray):
 
 <br>
 
-## Deleting elements
+## Deletion
 
 <br>
 
