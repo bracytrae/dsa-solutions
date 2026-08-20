@@ -1,7 +1,6 @@
 # Static Arrays 
 static arrays - 'cannot' grow/shrink or store 'additional' elements.
 
-<br>
 
 ## Reading arrays
 
