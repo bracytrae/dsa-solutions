@@ -1,12 +1,13 @@
 # Static Arrays 
-
 static arrays - cannot grow/shrink or store additional elements.
-
-## Reading from a array 
 
 <br>
 
-> choosing a value within an array 
+## Reading arrays
+
+<br>
+
+> choosing an element within an array 
 
 ```python
 # initializing an array 
@@ -15,6 +16,7 @@ myArray = [1, 2, 3]
 # accessing an arbitrary element within a array
 myArray = [i]
 ```
+
 <br>
 
 > traversing within an array 
@@ -32,7 +34,9 @@ while i < len(myArray):
 ```
 *\*the last element in an array is always at index n - 1, where n is the length of the array.*
 
-## Deleting from a array 
+<br>
+
+## Deleting elements
 
 <br>
 
@@ -49,7 +53,7 @@ def removeEnd(arr, length):
 
 <br>
 
-> deleting at a i'th index in an array
+> deleting at an i'th index in an array
 
 ```python
 def removeMiddle(arr, i, length):
@@ -60,7 +64,9 @@ def removeMiddle(arr, i, length):
 ```
 *\*in this algorithim length represents the same thing here, and i represents the index you wish to access.*
 
-## Insertion 
+<br>
+
+## Insertion
 
 <br>
 
@@ -77,7 +83,7 @@ def insertEnd(arr, n, length, capacity):
 
 <br>
 
-> inserting at the i'th index in an array
+> inserting at an i'th index in an array
 
 ```python
 def insertMiddle(arr, i, n, length): 
