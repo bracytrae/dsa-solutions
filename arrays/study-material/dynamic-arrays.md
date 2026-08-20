@@ -1,5 +1,5 @@
 # Dynamic Arrays 
-dynamic arrays - can grow/shrink and store additional elements. 
+dynamic arrays - 'can' grow/shrink and store 'additional' elements. 
 
 <br>
 
@@ -13,7 +13,7 @@ class DynamicArray:
         self.length = 0
         self.arr = [0] * capacity
 
-# creates a class blueprint for possible dynamic array objects due to behavior; dynamic arrays contain the same attributes as static arrays (e.g., capacity, length, & arr) but contain extra -> behavior (e.g., resize, pushback).
+# creates a class blueprint for possible dynamic array objects due to behavior; dynamic arrays contain the same attributes as static arrays (e.g., capacity, length, & arr) but contain 'additive' -> behavior (e.g., resize, pushback).
 ```
 *\*in the 'states', capacity represents how big the array is, length represents the number of values chosen within the array we wish to use, arr represents where the values are stored.*
 
