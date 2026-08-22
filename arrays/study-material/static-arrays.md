@@ -49,9 +49,6 @@ def removeEnd(arr, length):
 ```
 *\*in this algorithim length represents how many positions in the array are currently being used.*
 
-
-
-
 <br>
 
 > deleting at an i'th index in an array
