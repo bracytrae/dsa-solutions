@@ -3,20 +3,22 @@ stacks - 'abstract' data type that follows 'LIFO' (last in, first out).
 
 <br>
 
-common operations, 
+common operations,
 
 - push
 - pop
 - peek
 
+<br>
+
 ```python
-# think of a stack like a stack of "plates"
+# think of a stack like "plates"
 
     [30] ← top
     [20]
     [10]
 
-# you add and remove "plates" from the top
+# you add and remove "plates" by the top
 ```
 <br>
 
