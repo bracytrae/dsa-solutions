@@ -1,5 +1,5 @@
 # Dynamic Arrays 
-dynamic arrays - 'concrete' data type that 'can' grow/shrink and store 'additional' elements. 
+dynamic array - 'concrete' data structure that 'can' grow/shrink and store 'additional' elements. 
 
 <br>
 
