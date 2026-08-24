@@ -1,5 +1,6 @@
 # Static Arrays 
-static array - 'concrete' data structure that 'cannot' grow/shrink or store 'additional' elements.
+
+static array - 'concrete' data structure that stores elements in a sequence of indexed positions and 'cannot' grow/shrink
 
 ## Reading arrays
 
