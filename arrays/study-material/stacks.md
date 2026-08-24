@@ -1,6 +1,6 @@
 # Stacks 
 
-stack - a 'abstract' data type such that it follows 'LIFO' (last in, first out). 
+stack - an 'abstract' data type such that it follows 'LIFO' (last in, first out). 
 
 <br>
 
