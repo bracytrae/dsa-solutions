@@ -1,5 +1,5 @@
 # Stacks 
-stack - 'abstract' data type that follows 'LIFO' (last in, first out). 
+stack - 'abstract' data type such that it follows 'LIFO' (last in, first out). 
 
 <br>
 
