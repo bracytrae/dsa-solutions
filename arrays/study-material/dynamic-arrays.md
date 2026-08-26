@@ -1,6 +1,6 @@
 # Dynamic Arrays 
 
-dynamic array - a 'concrete' data structure that stores 'elements' in a sequence of 'indexed' positions that 'can' grow or shrink in size.
+dynamic array - it is a 'concrete' data structure that stores 'elements' in a sequence of 'indexed' positions; it 'can' grow or shrink in size.
 
 <br>
 
