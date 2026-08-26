@@ -1,6 +1,6 @@
 ## Doubly Linked Lists 
 
-doubly linked list - a concrete data structure such that it stores elements in a sequence of nodes, where each node contains an element and references to both the previous and next nodes in the sequence.
+doubly linked list - it is a 'concrete' data structure that stores 'elements' in a sequence of nodes; each 'node' contains a 'value' and references to the 'previous' and 'next' nodes. 
 
 # Operations of a Doubly Linked Lists 
 

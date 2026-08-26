@@ -1,6 +1,6 @@
 # Linked lists
 
-linked list - a 'concrete' data structure such that it stores values in a sequence of nodes, where each node contains an element and a reference to the next node.
+linked list - it is a 'concrete' data structure that stores 'elements' in a sequence of nodes; each 'node' contains a 'value' and reference to the 'next' node. 
 
 ## Creating a Linked List from scratch 
 
