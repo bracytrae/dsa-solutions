@@ -2,11 +2,13 @@
 
 static array - it is a 'concrete' data structure that stores 'elements' in a sequence of 'indexed' positions; it 'cannot' grow or shrink in size.
 
+> note --> static arrays are contiguous
+
 ## Reading arrays
 
 <br>
 
-> choosing an element within an array 
+> *choosing an element within an array*
 
 ```python
 # initializing an array 
@@ -18,7 +20,7 @@ myArray = [i]
 
 <br>
 
-> traversing within an array 
+> *traversing within an array*
 
 ```python
 for i in range(len(myArray)):
@@ -39,7 +41,7 @@ while i < len(myArray):
 
 <br>
 
-> deleting from the end of an array 
+> *deleting from the end of an array*
 
 ```python
 def removeEnd(arr, length):
@@ -52,7 +54,7 @@ def removeEnd(arr, length):
 
 <br>
 
-> deleting at an i'th index in an array
+> *deleting at an i'th index in an array*
 
 ```python
 def removeMiddle(arr, i, length):
@@ -69,7 +71,7 @@ def removeMiddle(arr, i, length):
 
 <br>
 
-> inserting at the end of an array
+> *inserting at the end of an array*
 
 ```python
 def insertEnd(arr, n, length, capacity):
@@ -82,7 +84,7 @@ def insertEnd(arr, n, length, capacity):
 
 <br>
 
-> inserting at an i'th index in an array
+> *inserting at an i'th index in an array*
 
 ```python
 def insertMiddle(arr, i, n, length): 

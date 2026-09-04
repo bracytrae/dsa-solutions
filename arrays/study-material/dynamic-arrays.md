@@ -2,9 +2,13 @@
 
 dynamic array - it is a 'concrete' data structure that stores 'elements' in a sequence of 'indexed' positions; it 'can' grow or shrink in size.
 
+> note --> dynamic arrays are contiguous
+
+## Creating a Dynamic Array 
+
 <br>
 
-> creating a class blueprint
+> *creating its class blueprint*
 
 ```python
 class DynamicArray:
@@ -14,17 +18,18 @@ class DynamicArray:
         self.length = 0
         self.arr = [0] * capacity
 
-# creates a class blueprint for possible dynamic array objects due to behavior; dynamic arrays contain the same attributes as static arrays (e.g., capacity, length, & arr) but contain 'additive' -> behavior (e.g., resize, pushback).
+# creates a class blueprint for possible dynamic array objects due to 'behavioral' dissimilarity; they contain the 'same' attributes as static arrays (e.g., capacity, length, & arr) but contain 'additive' -> 'behavior' (e.g., resize, pushback).
 ```
-*\*in the 'states', capacity represents how big the array is, length represents how many positions in the array are currently being used, and arr represents where the values are stored.*
 
-<br>
+*\*in the class, capacity represents how big the array is, length represents how many positions in the array are currently being used, and arr represents where the values are stored.*
+
+<br>        
 
 ## Insertion 
 
 <br>
 
-> inserting new values into an array
+> *inserting new values into an array*
 
 ```python
 def pushback(self, n):
@@ -44,7 +49,7 @@ def pushback(self, n):
 
 <br>
 
-> doubling the capacity of an array
+> *doubling the capacity of an array*
 
 ```python
  def resize(self): 
